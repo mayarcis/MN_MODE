@@ -1,0 +1,664 @@
+
+/* Women Hero */
+.women-hero {
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+    background: #252321;
+}
+
+.women-hero img,
+.women-hero video {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+.women-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(0,0,0,.65), rgba(0,0,0,.08));
+}
+
+.women-hero-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 550px;
+    max-width: 80%;
+    color: white;
+}
+
+.women-hero-content span {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #d5bd96;
+}
+
+.women-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.women-hero-content p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.women-hero-content a {
+    display: inline-block;
+    padding: 15px 28px;
+    color: white;
+    border: 1px solid white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.women-hero-content a:hover {
+    background: white;
+    color: #262321;
+}
+
+/* Categories */
+.women-categories {
+    background: white;
+}
+
+.dark-mode .women-categories {
+    background: #171615;
+}
+
+.women-category-card {
+    position: relative;
+    display: block;
+    height: 420px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+}
+
+.women-category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .8s;
+}
+
+.women-category-card:hover img {
+    transform: scale(1.07);
+}
+
+.women-category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,.65));
+}
+
+.women-category-overlay {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 25px;
+}
+
+.women-category-overlay h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.women-category-overlay span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* Hero Sections */
+.dresses-hero,
+.casual-hero,
+.accessories-hero {
+    position: relative;
+    height: 560px;
+    overflow: hidden;
+}
+
+.dresses-hero img,
+.casual-hero img,
+.accessories-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dresses-hero-overlay,
+.casual-hero-overlay,
+.accessories-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+}
+
+.dresses-hero-content,
+.casual-hero-content,
+.accessories-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 550px;
+    max-width: 80%;
+    color: white;
+}
+
+.dresses-hero-content span,
+.casual-hero-content span,
+.accessories-hero-content span {
+    color: #d5bd96;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.dresses-hero-content h1,
+.casual-hero-content h1,
+.accessories-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.dresses-hero-content p,
+.casual-hero-content p
+ {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.dresses-hero-content a,
+.casual-hero-content a,
+.accessories-hero-content a {
+    display: inline-block;
+    padding: 14px 25px;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 11px;
+    transition: .3s;
+}
+
+.dresses-hero-content a:hover,
+.casual-hero-content a:hover,
+.accessories-hero-content a:hover {
+    background: white;
+    color: black;
+}
+
+/* Breadcrumb */
+.dresses-breadcrumb,
+.casual-breadcrumb,
+.accessories-breadcrumb {
+    padding: 20px 0;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.dresses-breadcrumb a,
+.dresses-breadcrumb span,
+.casual-breadcrumb a,
+.casual-breadcrumb span,
+.accessories-breadcrumb a,
+.accessories-breadcrumb span {
+    color: #777;
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Introduction */
+.dresses-intro,
+.casual-intro,
+.accessories-intro {
+    padding: 60px 15px 40px;
+    text-align: center;
+    background: white;
+}
+
+.dresses-intro span,
+.casual-intro span,
+.accessories-intro span {
+    color: #a58c69;
+    font-size: 11px;
+}
+
+.dresses-intro h2,
+.casual-intro h2,
+.accessories-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin: 15px 0;
+    color: #252321;
+}
+
+.dresses-intro p,
+.casual-intro p
+{
+    max-width: 550px;
+    margin: auto;
+    color: #777;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* Product Cards */
+.dresses-image,
+.casual-image,
+.accessories-image {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    background: #f4f3f1;
+}
+
+.dresses-image img,
+.casual-image img,
+.accessories-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.dresses-card:hover img,
+.casual-card:hover img,
+.accessories-card:hover img {
+    transform: scale(1.05);
+}
+
+.dresses-image .hover-image,
+.casual-image .hover-image
+ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.dresses-card:hover .hover-image,
+.casual-card:hover .hover-image
+ {
+    opacity: 1;
+}
+
+.dresses-card:hover .main-image,
+.casual-card:hover .main-image
+ {
+    opacity: 0;
+}
+
+.dresses-badge,
+.casual-badge,
+.accessories-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    padding: 7px 10px;
+    background: white;
+    font-size: 9px;
+}
+
+.dresses-favorite,
+.casual-favorite,
+.accessories-favorite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    font-size: 17px;
+}
+
+.dresses-info,
+.casual-info,
+.accessories-info {
+    padding: 17px 2px;
+}
+
+.dresses-info h4,
+.casual-info h4,
+.accessories-info h4 {
+    font-size: 13px;
+    color: #292725;
+}
+
+.dresses-info p,
+.casual-info p,
+.accessories-info p {
+    font-size: 11px;
+    color: #888;
+}
+
+.dresses-price,
+.casual-price,
+.accessories-price {
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Filters */
+.dresses-filters,
+.casual-filters,
+.accessories-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.dresses-filter,
+.casual-filter,
+.accessories-filter {
+    padding: 10px 18px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #555;
+    font-size: 11px;
+}
+
+.dresses-filter:hover,
+.dresses-filter.active,
+.casual-filter:hover,
+.casual-filter.active,
+.accessories-filter:hover,
+.accessories-filter.active {
+    background: #252321;
+    color: white;
+}
+
+/* Size */
+.dresses-size-section,
+.casual-size-section,
+.accessories-size-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.dresses-size-section label,
+.casual-size-section label,
+.accessories-size-section label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dresses-size,
+.casual-size,
+.accessories-size {
+    flex: 1;
+    padding: 9px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 12px;
+    outline: none;
+}
+
+/* Colors */
+.dresses-colors,
+.casual-colors,
+.accessories-colors {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.dresses-colors span,
+.casual-colors span,
+.accessories-colors span {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dresses-colors span.selected-color,
+.casual-colors span.selected-color,
+.accessories-colors span.selected-color {
+    outline: 2px solid #252321;
+    outline-offset: 3px;
+}
+
+/* Add To Cart */
+.add-to-cart-btn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #252321;
+    background: #252321;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.add-to-cart-btn:hover {
+    background: white;
+    color: #252321;
+}
+
+.add-to-cart-btn i {
+    margin-right: 7px;
+}
+
+/* Dark Mode */
+.dark-mode .dresses-breadcrumb,
+.dark-mode .dresses-intro,
+.dark-mode .dresses-products,
+.dark-mode .casual-breadcrumb,
+.dark-mode .casual-intro,
+.dark-mode .casual-products,
+.dark-mode .accessories-breadcrumb,
+.dark-mode .accessories-intro,
+.dark-mode .accessories-products {
+    background: #171615;
+}
+
+.dark-mode .dresses-intro h2,
+.dark-mode .casual-intro h2,
+.dark-mode .accessories-intro h2,
+.dark-mode .dresses-toolbar h3,
+.dark-mode .casual-toolbar h3,
+.dark-mode .accessories-toolbar h3,
+.dark-mode .dresses-info h4,
+.dark-mode .casual-info h4,
+.dark-mode .accessories-info h4,
+.dark-mode .dresses-price,
+.dark-mode .casual-price,
+.dark-mode .accessories-price,
+.dark-mode .dresses-size-section label,
+.dark-mode .casual-size-section label,
+.dark-mode .accessories-size-section label {
+    color: white;
+}
+
+.dark-mode .dresses-intro p,
+.dark-mode .casual-intro p,
+.dark-mode .accessories-intro p,
+.dark-mode .dresses-info p,
+.dark-mode .casual-info p,
+.dark-mode .accessories-info p {
+    color: #aaa;
+}
+
+.dark-mode .dresses-sort select,
+.dark-mode .casual-sort select,
+.dark-mode .accessories-sort select,
+.dark-mode .dresses-filter,
+.dark-mode .casual-filter,
+.dark-mode .accessories-filter,
+.dark-mode .dresses-size,
+.dark-mode .casual-size,
+.dark-mode .accessories-size {
+    background: #252321;
+    color: white;
+}
+
+.dark-mode .dresses-filter.active,
+.dark-mode .casual-filter.active,
+.dark-mode .accessories-filter.active {
+    background: #d5bd96;
+    color: #252321;
+}
+
+.dark-mode .dresses-size,
+.dark-mode .casual-size,
+.dark-mode .accessories-size {
+    border-color: #555;
+}
+
+.dark-mode .dresses-colors span.selected-color,
+.dark-mode .casual-colors span.selected-color,
+.dark-mode .accessories-colors span.selected-color {
+    outline-color: white;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .women-hero {
+        height: 550px;
+    }
+
+    .women-category-card {
+        height: 350px;
+    }
+
+    .dresses-hero,
+    .casual-hero,
+    .accessories-hero {
+        height: 480px;
+    }
+
+    .dresses-image,
+    .casual-image,
+    .accessories-image {
+        height: 320px;
+    }
+}
+
+@media (max-width: 767px) {
+    .women-hero {
+        height: 500px;
+    }
+
+    .women-hero-content,
+    .dresses-hero-content,
+    .casual-hero-content,
+    .accessories-hero-content {
+        left: 7%;
+    }
+
+    .women-hero-content {
+        max-width: 86%;
+    }
+
+    .women-hero-content h1 {
+        font-size: 43px;
+    }
+
+    .women-hero-content p {
+        font-size: 13px;
+    }
+
+    .women-category-card {
+        height: 280px;
+    }
+
+    .women-category-overlay {
+        left: 15px;
+        bottom: 18px;
+    }
+
+    .women-category-overlay h3 {
+        font-size: 23px;
+    }
+
+    .dresses-hero,
+    .casual-hero,
+    .accessories-hero {
+        height: 430px;
+    }
+
+    .dresses-hero-content h1,
+    .casual-hero-content h1,
+    .accessories-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .dresses-toolbar,
+    .casual-toolbar,
+    .accessories-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .dresses-image,
+    .casual-image,
+    .accessories-image {
+        height: 270px;
+    }
+
+    .dresses-intro h2,
+    .casual-intro h2,
+    .accessories-intro h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 400px) {
+    .women-hero {
+        height: 450px;
+    }
+
+    .women-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .women-category-card {
+        height: 230px;
+    }
+
+    .dresses-hero,
+    .casual-hero,
+    .accessories-hero {
+        height: 380px;
+    }
+
+    .dresses-hero-content h1,
+    .casual-hero-content h1,
+    .accessories-hero-content h1 {
+        font-size: 33px;
+    }
+
+    .dresses-image,
+    .casual-image,
+    .accessories-image {
+        height: 220px;
+    }
+}
