@@ -1,0 +1,590 @@
+/* Kids Hero */
+.kids-hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background: #252321;
+}
+
+.kids-hero img,
+.kids-hero video {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+}
+.kids-hero img{
+
+object-fit:contain;
+}
+.kids-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.08));
+}
+
+.kids-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 550px;
+    max-width: 80%;
+    color: white;
+    z-index: 2;
+}
+
+.kids-hero-content span {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #9db6cc;
+}
+
+.kids-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.15;
+    margin: 22px 0;
+}
+
+.kids-hero-content p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.kids-hero-content a {
+    display: inline-block;
+    padding: 14px 28px;
+    color: white;
+    border: 1px solid white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.kids-hero-content a:hover {
+    background: #263b5a;
+    color: white;
+}
+
+/* Categories */
+.kids-categories {
+    background: white;
+}
+
+.dark-mode .kids-categories {
+    background: #171615;
+}
+
+.kids-category-card,
+.men-category-card {
+    position: relative;
+    display: block;
+    height: 420px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+}
+
+.kids-category-card img,
+.men-category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .8s;
+}
+
+.kids-category-card:hover img,
+.men-category-card:hover img {
+    transform: scale(1.07);
+}
+
+.kids-category-card::after,
+.men-category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,.65));
+}
+
+.kids-category-overlay,
+.men-category-overlay {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 25px;
+}
+
+.kids-category-overlay h3,
+.men-category-overlay h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.kids-category-overlay span,
+.men-category-overlay span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* Breadcrumb */
+.kids-breadcrumb {
+    padding: 18px 0;
+    background: #f8f7f5;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+}
+
+.kids-breadcrumb a {
+    color: #777;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.kids-breadcrumb a:hover {
+    color: #b69a68;
+}
+
+.kids-breadcrumb span {
+    margin: 0 8px;
+    color: #999;
+}
+
+/* Introduction */
+.kids-intro {
+    padding: 75px 15px 65px;
+    text-align: center;
+    background: white;
+}
+
+.kids-intro .container {
+    max-width: 750px;
+}
+
+.kids-intro span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #b69a68;
+}
+
+.kids-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    line-height: 1.3;
+    color: #252321;
+    margin-bottom: 18px;
+}
+
+.kids-intro p {
+    max-width: 650px;
+    margin: auto;
+    color: #777;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* Products Section */
+.kids-products {
+    padding: 65px 0 90px;
+    background: #faf9f7;
+}
+
+.kids-products .container-fluid {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.kids-products .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    padding: 0 12px;
+}
+
+.kids-products .section-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #526f91;
+}
+
+.kids-products .section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #252321;
+    margin: 0;
+}
+
+/* Product Cards */
+.kids-item {
+    margin-bottom: 20px;
+}
+
+.kids-card {
+    height: 100%;
+    background: white;
+    transition: .3s;
+}
+
+.kids-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.kids-image {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    background: #f1efec;
+}
+
+.kids-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .5s, transform .6s;
+}
+
+.kids-image .hover-image {
+    opacity: 0;
+}
+
+.kids-card:hover .main-image {
+    opacity: 0;
+}
+
+.kids-card:hover .hover-image {
+    opacity: 1;
+    transform: scale(1.04);
+}
+
+/* Product Badge */
+.kids-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+    padding: 7px 12px;
+    background: #263b5a;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* Favorite */
+.kids-favorite {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    z-index: 3;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #252321;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.kids-favorite:hover {
+    background: #252321;
+    color: white;
+}
+
+/* Product Information */
+.kids-info {
+    padding: 20px 18px 22px;
+}
+
+.kids-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: #252321;
+    margin-bottom: 7px;
+}
+
+.kids-info p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.kids-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #263b5a;
+    margin-bottom: 15px;
+}
+
+/* Colors */
+.kids-colors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.kids-colors .color-option {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.kids-colors .color-option:hover {
+    outline: 1px solid #263b5a;
+    outline-offset: 3px;
+}
+
+.kids-colors .color-option.selected-color {
+    outline: 1px solid #263b5a;
+    outline-offset: 3px;
+}
+
+/* Size */
+.kids-size-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.kids-size-section label {
+    font-size: 12px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.kids-size {
+    flex: 1;
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #252321;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+
+.kids-size:focus {
+    border-color: #b69a68;
+}
+
+/* Add To Cart */
+.kids-info .add-to-cart-btn {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #263b5a;
+    background: #263b5a;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.kids-info .add-to-cart-btn:hover {
+    background: white;
+    color: #263b5a;
+}
+
+/* Dark Mode */
+.dark-mode .kids-breadcrumb {
+    background: #201f1d;
+    border-color: #333;
+}
+
+.dark-mode .kids-breadcrumb a,
+.dark-mode .kids-breadcrumb span {
+    color: #aaa;
+}
+
+.dark-mode .kids-intro {
+    background: #171615;
+}
+
+.dark-mode .kids-intro h2 {
+    color: white;
+}
+
+.dark-mode .kids-intro p {
+    color: #aaa;
+}
+
+.dark-mode .kids-products {
+    background: #201f1d;
+}
+
+.dark-mode .kids-products .section-heading h2 {
+    color: white;
+}
+
+.dark-mode .kids-card {
+    background: #292725;
+}
+
+.dark-mode .kids-info h4 {
+    color: white;
+}
+
+.dark-mode .kids-price {
+    color: #9db6cc;
+}
+
+.dark-mode .kids-info p,
+.dark-mode .kids-size-section label {
+    color: #bbb;
+}
+
+.dark-mode .kids-size {
+    background: #201f1d;
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode .kids-info .add-to-cart-btn {
+    background: #9db6cc;
+    color: #252321;
+    border-color: #9db6cc;
+}
+
+.dark-mode .kids-info .add-to-cart-btn:hover {
+    background: transparent;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .kids-hero {
+        height: 530px;
+    }
+
+    .kids-category-card,
+    .men-category-card {
+        height: 380px;
+    }
+
+    .kids-image {
+        height: 340px;
+    }
+
+    .kids-intro {
+        padding: 60px 15px;
+    }
+
+    .kids-products {
+        padding: 55px 0 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    .kids-hero {
+        height: 470px;
+    }
+
+    .kids-hero-content {
+        left: 7%;
+        max-width: 86%;
+    }
+
+    .kids-hero-content h1 {
+        font-size: 43px;
+    }
+
+    .kids-hero-content p {
+        font-size: 13px;
+    }
+
+    .kids-category-card,
+    .men-category-card {
+        height: 360px;
+    }
+
+    .kids-intro {
+        padding: 50px 20px;
+    }
+
+    .kids-intro h2 {
+        font-size: 30px;
+    }
+
+    .kids-intro p {
+        font-size: 13px;
+    }
+
+    .kids-products {
+        padding: 45px 0 60px;
+    }
+
+    .kids-products .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .kids-products .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .kids-image {
+        height: 360px;
+    }
+
+    .kids-info {
+        padding: 17px 15px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .kids-hero {
+        height: 420px;
+    }
+
+    .kids-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .kids-hero-content span {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .kids-category-card,
+    .men-category-card {
+        height: 320px;
+    }
+
+    .kids-intro h2 {
+        font-size: 26px;
+    }
+
+    .kids-products .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .kids-image {
+        height: 320px;
+    }
+
+    .kids-info h4 {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Fashion | Boys Collection</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/kids.css">
+</head>
+
+<body>
+
+    <div class="announcement">
+        <p data-en="BOYS COLLECTION — FREE SHIPPING ON ORDERS OVER $100"
+            data-ar="مجموعة الأولاد — شحن مجاني للطلبات فوق 100$">
+            BOYS COLLECTION — FREE SHIPPING ON ORDERS OVER $100
+        </p>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-lg-5">
+
+                <a class="navbar-brand" href="../html/home.html">
+                    <span class="logo">MN</span>
+                    <span class="brand-name">FASHION</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/home.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../html/kids.html" data-en="Kids" data-ar="الأطفال">Kids</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#kids-products" data-en="New Arrivals" data-ar="وصل حديثاً">New Arrivals</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#kids-story" data-en="Our Story" data-ar="قصتنا">Our Story</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="nav-actions">
+
+                        <button class="icon-btn" id="searchBtn" aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </button>
+
+                        <a href="cart.html" class="icon-btn cart-link" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+
+                        <a href="wishlist.html" class="icon-btn cart-link" aria-label="Wishlist">
+                            <i class="bi bi-heart"></i>
+                            <span class="cart-count" id="wishlistCount">0</span>
+                        </a>
+
+                        <button class="icon-btn" id="themeBtn" aria-label="Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+
+                        <button class="language-btn" id="langBtn">AR</button>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="search-panel" id="searchPanel">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button id="closeSearch"><i class="bi bi-x-lg"></i></button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Boys Hero -->
+        <section class="kids-hero">
+
+            <img src="../image/Boys Sets.jpg" alt="Boys Collection">
+
+            <div class="kids-hero-overlay"></div>
+
+            <div class="kids-hero-content">
+
+                <span data-en="THE NEW BOYS' COLLECTION" data-ar="مجموعة الأولاد الجديدة">
+                    THE NEW BOYS' COLLECTION
+                </span>
+
+                <h1 data-en="Little Styles, Big Dreams" data-ar="أناقة صغيرة وأحلام كبيرة">
+                    Little Styles, Big Dreams
+                </h1>
+
+                <p data-en="Discover comfortable and stylish outfits made for every little adventure."
+                    data-ar="اكتشف ملابس مريحة وأنيقة تناسب مغامرات الأطفال اليومية.">
+                    Discover comfortable and stylish outfits made for every little adventure.
+                </p>
+
+                <a href="#kids-products" data-en="SHOP THE COLLECTION" data-ar="تسوق المجموعة">
+                    SHOP THE COLLECTION
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <div class="kids-breadcrumb">
+            <div class="container-fluid px-lg-5">
+                <a href="../html/home.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                <span>/</span>
+                <a href="../html/kids.html" data-en="Kids" data-ar="الأطفال">Kids</a>
+                <span>/</span>
+                <span data-en="Boys" data-ar="أولاد">Boys</span>
+            </div>
+        </div>
+
+        <!-- Products -->
+        <section class="kids-products" id="kids-products">
+
+            <div class="container-fluid px-lg-5">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label" data-en="BOYS COLLECTION" data-ar="مجموعة الأولاد">BOYS COLLECTION</span>
+                        <h2 data-en="Boys New Arrivals" data-ar="أحدث ملابس الأولاد">Boys New Arrivals</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4 mx-0" id="kidsGrid">
+
+                    <!-- Product 1 -->
+                    <div class="col-12 col-md-6 col-lg-4 kids-item" data-category="boys" data-price="35">
+
+                        <div class="kids-card">
+
+                            <div class="kids-image">
+
+                                <span class="kids-badge" data-en="NEW" data-ar="جديد">NEW</span>
+
+                                <img class="main-image" src="../image/boys11.jpg" alt="Boys Casual Set">
+
+                                <img class="hover-image" src="../image/boys12.jpg" alt="Boys Casual Set">
+
+                                <button class="kids-favorite" data-id="1">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="kids-info">
+
+                                <h4 data-en="Boys Casual Set" data-ar="طقم أولادي كاجوال">Boys Casual Set</h4>
+
+                                <p data-en="Soft Cotton Two Piece" data-ar="طقم قطني ناعم من قطعتين">Soft Cotton Two Piece</p>
+
+                                <div class="kids-price">JD 35.00</div>
+
+                                <div class="kids-colors">
+                                    <span class="color-option" style="background:#263b5a;" data-color="Navy"></span>
+                                    <span class="color-option" style="background:#9db6cc;" data-color="Blue"></span>
+                                    <span class="color-option" style="background:#b7a58b;" data-color="Beige"></span>
+                                </div>
+
+                                <div class="kids-size-section">
+                                    <label for="kidsSize1">Size:</label>
+                                    <select class="kids-size" id="kidsSize1">
+                                        <option value="">Choose Size</option>
+                                        <option value="2-3Y">2-3 Years</option>
+                                        <option value="4-5Y">4-5 Years</option>
+                                        <option value="6-7Y">6-7 Years</option>
+                                        <option value="8-9Y">8-9 Years</option>
+                                        <option value="10-12Y">10-12 Years</option>
+                                    </select>
+                                </div>
+
+                                <button class="add-to-cart-btn">
+                                    <i class="bi bi-bag-plus"></i> Add to Cart
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-12 col-md-6 col-lg-4 kids-item" data-category="boys" data-price="39">
+
+                        <div class="kids-card">
+
+                            <div class="kids-image">
+
+                                <img class="main-image" src="../image/boys21.jpg" alt="Boys Sport Set">
+
+                                <img class="hover-image" src="../image/boys22.jpg" alt="Boys Sport Set">
+
+                                <button class="kids-favorite" data-id="2">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="kids-info">
+
+                                <h4 data-en="Boys Sport Set" data-ar="طقم رياضي للأولاد">Boys Sport Set</h4>
+
+                                <p data-en="Comfortable Daily Outfit" data-ar="ملابس يومية مريحة">Comfortable Daily Outfit</p>
+
+                                <div class="kids-price">JD 39.00</div>
+
+                                <div class="kids-colors">
+                                    <span class="color-option" style="background:#263b5a;" data-color="Navy"></span>
+                                    <span class="color-option" style="background:#333;" data-color="Black"></span>
+                                    <span class="color-option" style="background:#eee;" data-color="White"></span>
+                                </div>
+
+                                <div class="kids-size-section">
+                                    <label for="kidsSize2">Size:</label>
+                                    <select class="kids-size" id="kidsSize2">
+                                        <option value="">Choose Size</option>
+                                        <option value="2-3Y">2-3 Years</option>
+                                        <option value="4-5Y">4-5 Years</option>
+                                        <option value="6-7Y">6-7 Years</option>
+                                        <option value="8-9Y">8-9 Years</option>
+                                        <option value="10-12Y">10-12 Years</option>
+                                    </select>
+                                </div>
+
+                                <button class="add-to-cart-btn">
+                                    <i class="bi bi-bag-plus"></i> Add to Cart
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-12 col-md-6 col-lg-4 kids-item" data-category="boys" data-price="42">
+
+                        <div class="kids-card">
+
+                            <div class="kids-image">
+
+                                <span class="kids-badge" data-en="POPULAR" data-ar="الأكثر طلباً">POPULAR</span>
+
+                                <img class="main-image" src="../image/boys31.jpg" alt="Boys Summer Outfit">
+
+                                <img class="hover-image" src="../image/boys32.jpg" alt="Boys Summer Outfit">
+
+                                <button class="kids-favorite" data-id="3">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="kids-info">
+
+                                <h4 data-en="Boys Summer Outfit" data-ar="طقم صيفي للأولاد">Boys Summer Outfit</h4>
+
+                                <p data-en="Lightweight Summer Outfit" data-ar="طقم صيفي خفيف">Lightweight Summer Outfit</p>
+
+                                <div class="kids-price">JD 42.00</div>
+
+                                <div class="kids-colors">
+                                    <span class="color-option" style="background:#263b5a;" data-color="Navy"></span>
+                                    <span class="color-option" style="background:#c9b99d;" data-color="Beige"></span>
+                                    <span class="color-option" style="background:#9db6cc;" data-color="Blue"></span>
+                                </div>
+
+                                <div class="kids-size-section">
+                                    <label for="kidsSize3">Size:</label>
+                                    <select class="kids-size" id="kidsSize3">
+                                        <option value="">Choose Size</option>
+                                        <option value="2-3Y">2-3 Years</option>
+                                        <option value="4-5Y">4-5 Years</option>
+                                        <option value="6-7Y">6-7 Years</option>
+                                        <option value="8-9Y">8-9 Years</option>
+                                        <option value="10-12Y">10-12 Years</option>
+                                    </select>
+                                </div>
+
+                                <button class="add-to-cart-btn">
+                                    <i class="bi bi-bag-plus"></i> Add to Cart
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-12 col-md-6 col-lg-4 kids-item" data-category="boys" data-price="37">
+
+                        <div class="kids-card">
+
+                            <div class="kids-image">
+
+                                <img class="main-image" src="../image/boys41.jpg" alt="Boys Everyday Outfit">
+
+                                <img class="hover-image" src="../image/boys42.jpg" alt="Boys Everyday Outfit">
+
+                                <button class="kids-favorite" data-id="4">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="kids-info">
+
+                                <h4 data-en="Boys Everyday Outfit" data-ar="طقم يومي للأولاد">Boys Everyday Outfit</h4>
+
+                                <p data-en="Soft Cotton Casual Set" data-ar="طقم قطني كاجوال ناعم">Soft Cotton Casual Set</p>
+
+                                <div class="kids-price">JD 37.00</div>
+
+                                <div class="kids-colors">
+                                    <span class="color-option" style="background:#9db6cc;" data-color="Blue"></span>
+                                    <span class="color-option" style="background:#c9b99d;" data-color="Beige"></span>
+                                </div>
+
+                                <div class="kids-size-section">
+                                    <label for="kidsSize4">Size:</label>
+                                    <select class="kids-size" id="kidsSize4">
+                                        <option value="">Choose Size</option>
+                                        <option value="2-3Y">2-3 Years</option>
+                                        <option value="4-5Y">4-5 Years</option>
+                                        <option value="6-7Y">6-7 Years</option>
+                                        <option value="8-9Y">8-9 Years</option>
+                                        <option value="10-12Y">10-12 Years</option>
+                                    </select>
+                                </div>
+
+                                <button class="add-to-cart-btn">
+                                    <i class="bi bi-bag-plus"></i> Add to Cart
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+
+        <div class="container-fluid px-lg-5">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+                    <a class="footer-logo" href="../html/home.html">MN.</a>
+
+                    <p data-en="Discover your style. Live your elegance." data-ar="اكتشف أسلوبك. عِش أناقتك.">
+                        Discover your style. Live your elegance.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 data-en="EXPLORE" data-ar="اكتشف">EXPLORE</h6>
+                    <a href="women.html" data-en="Women" data-ar="النساء">Women</a>
+                    <a href="men.html" data-en="Men" data-ar="الرجال">Men</a>
+                    <a href="kids.html" data-en="Kids" data-ar="الأطفال">Kids</a>
+                    <a href="lifestyle.html" data-en="Lifestyle" data-ar="أسلوب الحياة">Lifestyle</a>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 data-en="HELP" data-ar="المساعدة">HELP</h6>
+                    <a href="#contact" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
+                    <a href="#" data-en="Shipping" data-ar="الشحن">Shipping</a>
+                    <a href="#" data-en="Returns" data-ar="الإرجاع">Returns</a>
+                    <a href="#" data-en="FAQs" data-ar="الأسئلة الشائعة">FAQs</a>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 data-en="GET IN TOUCH" data-ar="تواصل معنا">GET IN TOUCH</h6>
+                    <p>MN MODE@gmail.com</p>
+                    <p data-en="Jordan" data-ar="الأردن">Jordan</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 MN Fashion Store. All Rights Reserved.</p>
+                <p data-en="Designed with elegance." data-ar="صُمم بأناقة.">Designed with elegance.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/kids.js"></script>
+
+</body>
+</html>
