@@ -1,16 +1,24 @@
+
 let savedProducts = JSON.parse(localStorage.getItem("wishlist")) || [];
 
 let wishlistGrid = document.getElementById("wishlistGrid");
 let emptyWishlist = document.getElementById("emptyWishlist");
+let wishlistCount = document.getElementById("wishlistCount");
 
 function saveWishlist() {
     localStorage.setItem("wishlist", JSON.stringify(savedProducts));
 }
 
 function displayWishlist() {
+    if (!wishlistGrid || !emptyWishlist) {
+        return;
+    }
+
     wishlistGrid.innerHTML = "";
 
-    document.getElementById("wishlistCount").textContent = savedProducts.length;
+    if (wishlistCount) {
+        wishlistCount.textContent = savedProducts.length;
+    }
 
     if (savedProducts.length === 0) {
         emptyWishlist.style.display = "block";
@@ -71,6 +79,10 @@ function deleteProduct(id) {
 
 function updateProduct(id) {
     let product = savedProducts.find(item => item.id === id);
+
+    if (!product) {
+        return;
+    }
 
     let newName = prompt("Enter new product name:", product.name);
 

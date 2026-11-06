@@ -1,7 +1,13 @@
+
 let savedProducts = JSON.parse(localStorage.getItem("wishlist")) || [];
+let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
 
 function saveWishlist() {
     localStorage.setItem("wishlist", JSON.stringify(savedProducts));
+}
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cartProducts));
 }
 
 function updateWishlistCount() {
@@ -12,12 +18,75 @@ function updateWishlistCount() {
     }
 }
 
+function updateCartCount() {
+    let count = document.getElementById("cartCount");
+
+    if (count) {
+        let total = 0;
+
+        cartProducts.forEach(product => {
+            total += Number(product.quantity) || 1;
+        });
+
+        count.textContent = total;
+    }
+}
+
+function getProductCard(button) {
+    return button.closest(
+        ".shirt-card, .jacket-card, .casual-card, .accessories-card"
+    );
+}
+
+function getProductItem(card) {
+    return card.closest(
+        ".shirt-item, .jacket-item, .casual-item, .accessories-item"
+    );
+}
+
+function getProductData(card) {
+    let item = getProductItem(card);
+    let favorite = card.querySelector(
+        ".shirt-favorite, .jacket-favorite, .casual-favorite, .accessories-favorite"
+    );
+
+    let image = card.querySelector(".main-image");
+    let name = card.querySelector("h4");
+    let price = item.dataset.price;
+
+    let category = Array.from(item.classList).find(className =>
+        className.endsWith("-item")
+    );
+
+    let sizeElement = card.querySelector(
+        ".shirt-size, .jacket-size, .casual-size"
+    );
+
+    let selectedColor = card.querySelector(".selected-color");
+
+    return {
+        id: category + "-" + favorite.dataset.id + "-" + image.getAttribute("src"),
+        name: name.textContent.trim(),
+        price: Number(price),
+        image: image.src,
+        size: sizeElement ? sizeElement.value : "",
+        color: selectedColor ? selectedColor.dataset.color : ""
+    };
+}
+
+// Wishlist
+
 function updateHeartButtons() {
-    document.querySelectorAll(".shirt-favorite").forEach(button => {
-        let id = button.dataset.id;
+    document.querySelectorAll(
+        ".shirt-favorite, .jacket-favorite, .casual-favorite, .accessories-favorite"
+    ).forEach(button => {
+        let card = getProductCard(button);
+        let product = getProductData(card);
         let icon = button.querySelector("i");
 
-        if (savedProducts.some(product => product.id === id)) {
+        let exists = savedProducts.some(item => item.id === product.id);
+
+        if (exists) {
             icon.classList.remove("bi-heart");
             icon.classList.add("bi-heart-fill");
             button.style.color = "#c0392b";
@@ -29,19 +98,14 @@ function updateHeartButtons() {
     });
 }
 
-document.querySelectorAll(".shirt-favorite").forEach(button => {
+document.querySelectorAll(
+    ".shirt-favorite, .jacket-favorite, .casual-favorite, .accessories-favorite"
+).forEach(button => {
     button.addEventListener("click", function () {
-        let id = this.dataset.id;
-        let card = this.closest(".shirt-card");
+        let card = getProductCard(this);
+        let product = getProductData(card);
 
-        let product = {
-            id: id,
-            name: card.querySelector("h4").textContent,
-            price: card.querySelector(".shirt-price").textContent,
-            image: card.querySelector(".main-image").src
-        };
-
-        let index = savedProducts.findIndex(item => item.id === id);
+        let index = savedProducts.findIndex(item => item.id === product.id);
 
         if (index === -1) {
             savedProducts.push(product);
@@ -55,5 +119,70 @@ document.querySelectorAll(".shirt-favorite").forEach(button => {
     });
 });
 
+// Color Selection
+
+document.querySelectorAll(
+    ".shirt-colors, .jacket-colors, .casual-colors"
+).forEach(colorGroup => {
+    colorGroup.querySelectorAll(".color-option").forEach(color => {
+        color.addEventListener("click", function () {
+            colorGroup.querySelectorAll(".color-option").forEach(option => {
+                option.classList.remove("selected-color");
+            });
+
+            this.classList.add("selected-color");
+        });
+    });
+});
+
+// Add To Cart
+
+document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        let card = getProductCard(this);
+        let product = getProductData(card);
+
+        let sizeElement = card.querySelector(
+            ".shirt-size, .jacket-size, .casual-size"
+        );
+
+        let colorGroup = card.querySelector(
+            ".shirt-colors, .jacket-colors, .casual-colors"
+        );
+
+        if (sizeElement && product.size === "") {
+            alert("Please choose a size first!");
+            return;
+        }
+
+        if (colorGroup && product.color === "") {
+            alert("Please choose a color!");
+            return;
+        }
+
+        product.quantity = 1;
+
+        let existingProduct = cartProducts.find(item =>
+            item.id === product.id &&
+            item.size === product.size &&
+            item.color === product.color
+        );
+
+        if (existingProduct) {
+            existingProduct.quantity++;
+        } else {
+            cartProducts.push(product);
+        }
+
+        saveCart();
+        updateCartCount();
+
+        alert("Product added to cart successfully!");
+    });
+});
+
+// Update Counts
+
 updateHeartButtons();
 updateWishlistCount();
+updateCartCount();

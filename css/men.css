@@ -121,25 +121,25 @@
 }
 
 /* Shirts Hero */
-.shirts-hero {
+.shirts-hero, .jackets-hero, .casual-hero, .accessories-hero {
     position: relative;
     height: 560px;
     overflow: hidden;
 }
 
-.shirts-hero img {
+.shirts-hero img, .jackets-hero img, .casual-hero img, .accessories-hero img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-.shirts-hero-overlay {
+.shirts-hero-overlay, .jackets-hero-overlay, .casual-hero-overlay, .accessories-hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,.4);
 }
 
-.shirts-hero-content {
+.shirts-hero-content, .jackets-hero-content, .casual-hero-content, .accessories-hero-content {
     position: absolute;
     top: 50%;
     left: 10%;
@@ -149,26 +149,25 @@
     color: white;
 }
 
-.shirts-hero-content span,
-.shirts-story span {
+.shirts-hero-content span, .jackets-hero-content span, .casual-hero-content span, .accessories-hero-content span {
     color: #d5bd96;
     font-size: 11px;
     letter-spacing: 3px;
 }
 
-.shirts-hero-content h1 {
+.shirts-hero-content h1, .jackets-hero-content h1, .casual-hero-content h1, .accessories-hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 55px;
     margin: 20px 0;
 }
 
-.shirts-hero-content p {
+.shirts-hero-content p, .jackets-hero-content p, .casual-hero-content p, .accessories-hero-content p {
     font-size: 14px;
     line-height: 2;
     margin-bottom: 25px;
 }
 
-.shirts-hero-content a {
+.shirts-hero-content a, .jackets-hero-content a, .casual-hero-content a, .accessories-hero-content a {
     display: inline-block;
     padding: 14px 25px;
     color: white;
@@ -177,20 +176,19 @@
     font-size: 11px;
 }
 
-.shirts-hero-content a:hover {
+.shirts-hero-content a:hover, .jackets-hero-content a:hover, .casual-hero-content a:hover, .accessories-hero-content a:hover {
     background: white;
     color: black;
 }
 
 /* Breadcrumb */
-.shirts-breadcrumb {
+.shirts-breadcrumb, .jackets-breadcrumb, .casual-breadcrumb, .accessories-breadcrumb {
     padding: 20px 0;
     background: white;
     border-bottom: 1px solid #eee;
 }
 
-.shirts-breadcrumb a,
-.shirts-breadcrumb span {
+.shirts-breadcrumb a, .shirts-breadcrumb span, .jackets-breadcrumb a, .jackets-breadcrumb span, .casual-breadcrumb a, .casual-breadcrumb span, .accessories-breadcrumb a, .accessories-breadcrumb span {
     color: #777;
     font-size: 12px;
     text-decoration: none;
@@ -198,25 +196,25 @@
 }
 
 /* Introduction */
-.shirts-intro {
+.shirts-intro, .jackets-intro, .casual-intro, .accessories-intro {
     padding: 60px 15px 40px;
     text-align: center;
     background: white;
 }
 
-.shirts-intro span {
+.shirts-intro span, .jackets-intro span, .casual-intro span, .accessories-intro span {
     color: #a58c69;
     font-size: 11px;
 }
 
-.shirts-intro h2 {
+.shirts-intro h2, .jackets-intro h2, .casual-intro h2, .accessories-intro h2 {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
     margin: 15px 0;
     color: #252321;
 }
 
-.shirts-intro p {
+.shirts-intro p, .jackets-intro p, .casual-intro p, .accessories-intro p {
     max-width: 550px;
     margin: auto;
     color: #777;
@@ -225,40 +223,40 @@
 }
 
 /* Product Cards */
-.shirt-image {
+.shirt-image, .jacket-image, .casual-image, .accessories-image {
     position: relative;
     height: 370px;
     overflow: hidden;
     background: #f4f3f1;
 }
 
-.shirt-image img {
+.shirt-image img, .jacket-image img, .casual-image img, .accessories-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: .5s;
 }
 
-.shirt-card:hover img {
+.shirt-card:hover img, .jacket-card:hover img, .casual-card:hover img, .accessories-card:hover img {
     transform: scale(1.05);
 }
 
-.shirt-image .hover-image {
+.shirt-image .hover-image, .jacket-image .hover-image, .casual-image .hover-image {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
 }
 
-.shirt-card:hover .hover-image {
+.shirt-card:hover .hover-image, .jacket-card:hover .hover-image, .casual-card:hover .hover-image {
     opacity: 1;
 }
 
-.shirt-card:hover .main-image {
+.shirt-card:hover .main-image, .jacket-card:hover .main-image, .casual-card:hover .main-image {
     opacity: 0;
 }
 
-.shirt-badge {
+.shirt-badge, .jacket-badge, .casual-badge, .accessories-badge {
     position: absolute;
     top: 15px;
     left: 15px;
@@ -268,7 +266,7 @@
     font-size: 9px;
 }
 
-.shirt-favorite {
+.shirt-favorite, .jacket-favorite, .casual-favorite, .accessories-favorite {
     position: absolute;
     top: 12px;
     right: 12px;
@@ -281,28 +279,28 @@
     font-size: 17px;
 }
 
-.shirt-info {
+.shirt-info, .jacket-info, .casual-info, .accessories-info {
     padding: 17px 2px;
 }
 
-.shirt-info h4 {
+.shirt-info h4, .jacket-info h4, .casual-info h4, .accessories-info h4 {
     font-size: 13px;
     color: #292725;
 }
 
-.shirt-info p {
+.shirt-info p, .jacket-info p, .casual-info p, .accessories-info p {
     font-size: 11px;
     color: #888;
 }
 
-.shirt-price {
+.shirt-price, .jacket-price, .casual-price, .accessories-price {
     margin-bottom: 12px;
     font-size: 13px;
     font-weight: bold;
 }
 
 /* Filters */
-.shirts-filters {
+.shirts-filters, .jackets-filters, .casual-filters, .accessories-filters {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -311,7 +309,7 @@
     border-bottom: 1px solid #eee;
 }
 
-.shirt-filter {
+.shirt-filter, .jacket-filter, .casual-filter, .accessories-filter {
     padding: 10px 18px;
     border: 1px solid #ddd;
     background: white;
@@ -319,26 +317,25 @@
     font-size: 11px;
 }
 
-.shirt-filter:hover,
-.shirt-filter.active {
+.shirt-filter:hover, .shirt-filter.active, .jacket-filter:hover, .jacket-filter.active, .casual-filter:hover, .casual-filter.active, .accessories-filter:hover, .accessories-filter.active {
     background: #252321;
     color: white;
 }
 
 /* Size */
-.shirt-size-section {
+.shirt-size-section, .jacket-size-section, .casual-size-section, .accessories-size-section {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-top: 18px;
 }
 
-.shirt-size-section label {
+.shirt-size-section label, .jacket-size-section label, .casual-size-section label, .accessories-size-section label {
     font-size: 12px;
     font-weight: 600;
 }
 
-.shirt-size {
+.shirt-size, .jacket-size, .casual-size, .accessories-size {
     flex: 1;
     padding: 9px;
     border: 1px solid #ddd;
@@ -348,13 +345,13 @@
 }
 
 /* Colors */
-.shirt-colors {
+.shirt-colors, .jacket-colors, .casual-colors, .accessories-colors {
     display: flex;
     gap: 12px;
     margin-top: 15px;
 }
 
-.shirt-colors span {
+.shirt-colors span, .jacket-colors span, .casual-colors span, .accessories-colors span {
     width: 20px;
     height: 20px;
     border: 1px solid #ddd;
@@ -362,10 +359,12 @@
     cursor: pointer;
 }
 
-.shirt-colors span.selected-color {
+.shirt-colors span.selected-color, .jacket-colors span.selected-color, .casual-colors span.selected-color, .accessories-colors span.selected-color {
     outline: 2px solid #252321;
     outline-offset: 3px;
 }
+
+
 
 /* Add To Cart */
 .add-to-cart-btn {
@@ -462,12 +461,6 @@
         max-width: 86%;
     }
 
-    [dir="rtl"] .men-hero-content,
-    [dir="rtl"] .shirts-hero-content {
-        left: auto;
-        right: 7%;
-    }
-
     .men-hero-content h1 {
         font-size: 43px;
     }
@@ -483,11 +476,6 @@
     .men-category-overlay {
         left: 15px;
         bottom: 18px;
-    }
-
-    [dir="rtl"] .men-category-overlay {
-        left: auto;
-        right: 15px;
     }
 
     .men-category-overlay h3 {
