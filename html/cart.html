@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Fashion | Shopping Cart</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/men.css">
+
+    <style>
+        .cart-page {
+            min-height: 60vh;
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .cart-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 35px;
+            color: #252321;
+        }
+
+        .cart-product {
+            background: white;
+            border: 1px solid #eee;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cart-product img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .cart-product h5 {
+            font-size: 17px;
+            color: #252321;
+        }
+
+        .cart-product p {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .cart-quantity button {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #ddd;
+            background: white;
+        }
+
+        .cart-delete {
+            border: none;
+            background: none;
+            color: #c0392b;
+            font-size: 13px;
+        }
+
+        .cart-summary {
+            padding: 25px;
+            background: #f7f6f4;
+            margin-top: 30px;
+        }
+
+        .cart-total {
+            font-size: 23px;
+            font-weight: 700;
+            color: #252321;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 14px;
+            background: #252321;
+            color: white;
+            border: 1px solid #252321;
+            margin-top: 15px;
+            transition: .3s;
+        }
+
+        .checkout-btn:hover {
+            background: white;
+            color: #252321;
+        }
+
+        .continue-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #252321;
+            color: #252321;
+            text-decoration: none;
+            font-size: 13px;
+            transition: .3s;
+        }
+
+        .continue-btn:hover {
+            background: #252321;
+            color: white;
+        }
+
+        .dark-mode .cart-page {
+            background: #171615;
+        }
+
+        .dark-mode .cart-title,
+        .dark-mode .cart-product h5,
+        .dark-mode .cart-total {
+            color: white;
+        }
+
+        .dark-mode .cart-product {
+            background: #252321;
+            border-color: #444;
+        }
+
+        .dark-mode .cart-summary {
+            background: #252321;
+        }
+
+        .dark-mode .cart-quantity button {
+            background: #333;
+            color: white;
+            border-color: #555;
+        }
+
+        .dark-mode .continue-btn {
+            color: white;
+            border-color: white;
+        }
+
+        .dark-mode .continue-btn:hover {
+            background: white;
+            color: #252321;
+        }
+
+        @media (max-width: 767px) {
+            .cart-title {
+                font-size: 30px;
+            }
+
+            .cart-product img {
+                height: 200px;
+                margin-bottom: 15px;
+            }
+
+            .cart-product .text-end {
+                text-align: left !important;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announcement">
+        <p data-en="FREE SHIPPING ON ORDERS OVER $100"
+            data-ar="شحن مجاني للطلبات فوق 100$">
+            FREE SHIPPING ON ORDERS OVER $100
+        </p>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-lg-5">
+
+                <a class="navbar-brand" href="home.html">
+                    <span class="logo">MN</span>
+                    <span class="brand-name">FASHION</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="men.html" data-en="Men" data-ar="الرجال">Men</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="wishlist.html" data-en="Wishlist" data-ar="المفضلة">Wishlist</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-actions">
+
+                        <a href="cart.html" class="icon-btn cart-link" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+
+                        <button class="icon-btn" id="themeBtn" aria-label="Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+
+                        <button class="language-btn" id="langBtn">AR</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+
+        <div class="container">
+
+            <h2 class="cart-title"
+                data-en="Your Shopping Cart"
+                data-ar="سلة التسوق">
+                Your Shopping Cart
+            </h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-summary">
+
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <h4 class="cart-total"
+                        data-en="Total:"
+                        data-ar="المجموع:">
+                        Total:
+                    </h4>
+
+                    <h4 class="cart-total">
+                        JD <span id="totalPrice">0.00</span>
+                    </h4>
+
+                </div>
+
+                <a href="men.html" class="continue-btn mt-3"
+                    data-en="Continue Shopping"
+                    data-ar="متابعة التسوق">
+                    <i class="bi bi-arrow-left"></i> Continue Shopping
+                </a>
+
+                <button class="checkout-btn" id="checkoutBtn"
+                    data-en="PROCEED TO CHECKOUT"
+                    data-ar="إتمام الشراء">
+                    PROCEED TO CHECKOUT
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container-fluid px-lg-5">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+                    <a class="footer-logo" href="home.html">MN.</a>
+
+                    <p data-en="Discover your style. Live your elegance."
+                        data-ar="اكتشف أسلوبك. عِش أناقتك.">
+                        Discover your style. Live your elegance.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 data-en="EXPLORE" data-ar="اكتشف">EXPLORE</h6>
+                    <a href="women.html" data-en="Women" data-ar="النساء">Women</a>
+                    <a href="men.html" data-en="Men" data-ar="الرجال">Men</a>
+                    <a href="kids.html" data-en="Kids" data-ar="الأطفال">Kids</a>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 data-en="HELP" data-ar="المساعدة">HELP</h6>
+                    <a href="#" data-en="Shipping" data-ar="الشحن">Shipping</a>
+                    <a href="#" data-en="Returns" data-ar="الإرجاع">Returns</a>
+                    <a href="#" data-en="FAQs" data-ar="الأسئلة الشائعة">FAQs</a>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 data-en="GET IN TOUCH" data-ar="تواصل معنا">GET IN TOUCH</h6>
+                    <p>MN MODE@gmail.com</p>
+                    <p data-en="Jordan" data-ar="الأردن">Jordan</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 MN Fashion Store. All Rights Reserved.</p>
+                <p data-en="Designed with elegance." data-ar="صُمم بأناقة.">Designed with elegance.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/cart.js"></script>
+
+</body>
+</html>
