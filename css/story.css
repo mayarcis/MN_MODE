@@ -1,0 +1,152 @@
+
+/* Our Story */
+.story-section {
+    padding: 90px 0;
+    background: #f4f3f1;
+}
+
+.story-image-box {
+    height: 470px;
+    overflow: hidden;
+}
+
+.story-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-content {
+    padding: 20px;
+}
+
+.story-label {
+    color: #a58c69;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.story-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin: 20px 0;
+    color: #252321;
+}
+
+.story-content p {
+    color: #777;
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.story-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding-bottom: 8px;
+    color: #252321;
+    border-bottom: 1px solid #a58c69;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.story-link:hover {
+    color: #a58c69;
+}
+
+.story-link i {
+    margin-left: 8px;
+}
+
+/* Our Message */
+.story-message {
+    padding: 90px 20px;
+    text-align: center;
+    background: #f4f3f1;
+}
+
+.story-message span {
+    color: #a58c69;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.story-message h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 20px 0;
+}
+
+.story-message p {
+    color: #777;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.story-message h5 {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #a58c69;
+}
+
+/* Dark Mode */
+.dark-mode .story-section,
+.dark-mode .story-message {
+    background: #171615;
+}
+
+.dark-mode .story-content h2,
+.dark-mode .story-message h2 {
+    color: white;
+}
+
+.dark-mode .story-content p,
+.dark-mode .story-message p {
+    color: #aaa;
+}
+
+.dark-mode .story-link {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+    .story-image-box {
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .story-section {
+        padding: 55px 0;
+    }
+
+    .story-image-box {
+        height: 350px;
+    }
+
+    .story-content {
+        padding: 10px;
+    }
+
+    .story-content h2 {
+        font-size: 34px;
+    }
+
+    .story-message h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .story-image-box {
+        height: 280px;
+    }
+
+}
