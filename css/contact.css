@@ -1,0 +1,159 @@
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background: #f4f3f1;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-heading span {
+    color: #a58c69;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.contact-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    color: #252321;
+    margin: 15px 0;
+}
+
+.contact-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 35px;
+}
+
+.contact-form h3,
+.contact-map h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #252321;
+    margin-bottom: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 13px;
+}
+
+.contact-form .form-control {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 13px;
+    font-size: 13px;
+}
+
+.contact-form .form-control:focus {
+    border-color: #a58c69;
+    box-shadow: none;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 14px;
+    background: #252321;
+    color: white;
+    border: 1px solid #252321;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #a58c69;
+    border-color: #a58c69;
+}
+
+#successMessage {
+    color: #6b8e63;
+    font-size: 13px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Map */
+.contact-map {
+    background: white;
+    padding: 25px;
+}
+
+.contact-map iframe {
+    display: block;
+}
+
+.contact-map p {
+    margin-top: 20px;
+    color: #777;
+    font-size: 13px;
+}
+
+.contact-map i {
+    color: #a58c69;
+    margin-right: 8px;
+}
+
+/* Dark Mode */
+.dark-mode .contact-section {
+    background: #171615;
+}
+
+.dark-mode .contact-heading h1 {
+    color: white;
+}
+
+.dark-mode .contact-form,
+.dark-mode .contact-map {
+    background: #252321;
+}
+
+.dark-mode .contact-form h3,
+.dark-mode .contact-map h3 {
+    color: white;
+}
+
+.dark-mode .contact-form label,
+.dark-mode .contact-map p {
+    color: #ccc;
+}
+
+.dark-mode .contact-form .form-control {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .contact-section {
+        padding: 55px 0;
+    }
+
+    .contact-heading h1 {
+        font-size: 35px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .contact-map {
+        padding: 15px;
+    }
+
+    .contact-map iframe {
+        height: 300px;
+    }
+}

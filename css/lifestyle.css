@@ -1,0 +1,288 @@
+
+/* Lifestyle Hero */
+.lifestyle-hero {
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+    background: #252321;
+}
+
+.lifestyle-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.lifestyle-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(0,0,0,.65), rgba(0,0,0,.08));
+}
+
+.lifestyle-hero-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 550px;
+    max-width: 80%;
+    color: white;
+}
+
+.lifestyle-hero-content span {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #d5bd96;
+}
+
+.lifestyle-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.lifestyle-hero-content p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.lifestyle-hero-content a {
+    display: inline-block;
+    padding: 15px 28px;
+    color: white;
+    border: 1px solid white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.lifestyle-hero-content a:hover {
+    background: white;
+    color: #262321;
+}
+
+/* Products */
+.lifestyle-products {
+    padding: 60px 0;
+    background: white;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-label {
+    color: #a58c69;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin: 15px 0;
+    color: #252321;
+}
+
+/* Product Cards */
+.lifestyle-card {
+    background: white;
+    height: 100%;
+}
+
+.lifestyle-image {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    background: #f4f3f1;
+}
+
+.lifestyle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.lifestyle-card:hover .lifestyle-image img {
+    transform: scale(1.05);
+}
+
+.lifestyle-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    padding: 7px 10px;
+    background: white;
+    color: #252321;
+    font-size: 9px;
+}
+
+.lifestyle-favorite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #252321;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.lifestyle-info {
+    padding: 17px 2px;
+}
+
+.lifestyle-info h4 {
+    font-size: 13px;
+    color: #292725;
+}
+
+.lifestyle-info p {
+    font-size: 11px;
+    color: #888;
+}
+
+.lifestyle-price {
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #252321;
+}
+
+/* Colors */
+.lifestyle-colors {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.lifestyle-colors span {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.lifestyle-colors span.selected-color {
+    outline: 2px solid #252321;
+    outline-offset: 3px;
+}
+
+/* Add To Cart */
+.lifestyle-add-btn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #252321;
+    background: #252321;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.lifestyle-add-btn:hover {
+    background: white;
+    color: #252321;
+}
+
+.lifestyle-add-btn i {
+    margin-right: 7px;
+}
+
+/* Dark Mode */
+.dark-mode .lifestyle-products {
+    background: #171615;
+}
+
+.dark-mode .section-heading h2,
+.dark-mode .lifestyle-info h4,
+.dark-mode .lifestyle-price {
+    color: white;
+}
+
+.dark-mode .lifestyle-info p {
+    color: #aaa;
+}
+
+.dark-mode .lifestyle-card {
+    background: #171615;
+}
+
+.dark-mode .lifestyle-image {
+    background: #252321;
+}
+
+.dark-mode .lifestyle-colors span.selected-color {
+    outline-color: white;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+    .lifestyle-hero {
+        height: 550px;
+    }
+
+    .lifestyle-image {
+        height: 320px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .lifestyle-hero {
+        height: 500px;
+    }
+
+    .lifestyle-hero-content {
+        left: 7%;
+        max-width: 86%;
+    }
+
+    .lifestyle-hero-content h1 {
+        font-size: 43px;
+    }
+
+    .lifestyle-hero-content p {
+        font-size: 13px;
+    }
+
+    .lifestyle-image {
+        height: 270px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .lifestyle-hero {
+        height: 450px;
+    }
+
+    .lifestyle-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .lifestyle-image {
+        height: 220px;
+    }
+
+}
